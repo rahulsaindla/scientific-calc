@@ -1,97 +1,158 @@
-🧮 Scientific Calculator
+<div align="center">
 
-A modern web-based Scientific Calculator that combines advanced calculations with a built-in mathematical formula library. Designed for students, educators, and mathematics enthusiasts, this project provides a fast, interactive, and user-friendly environment for solving mathematical problems and accessing formulas instantly.
+# 🧮 Scientific Calculator
 
-✨ Why This Project?
+### A Modern Mathematical Toolkit for Students, Learners & Problem Solvers
 
-Traditional calculators only provide answers, while textbooks provide formulas. This project combines both into a single platform, allowing users to calculate, search, learn, and revise without switching between multiple resources.
+Perform scientific calculations, explore mathematical formulas, and navigate concepts instantly through an intelligent search-powered interface.
 
-🚀 Getting Started
-📋 Prerequisites
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black)
+![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-yellow)
+![HTML](https://img.shields.io/badge/HTML-Markup-orange)
+![CSS](https://img.shields.io/badge/CSS-Styling-blue)
 
-Before running the project, ensure you have:
+</div>
 
-Python 3.x
-Flask
-Git
-Any modern web browser
-📥 Clone the Repository
-git clone <repository-url>
+---
+
+## 📖 About The Project
+
+Scientific Calculator is a web-based mathematics toolkit that combines scientific calculations with an intelligent formula reference system.
+
+Instead of switching between calculators, textbooks, and formula sheets, users can perform calculations, search formulas, and navigate mathematical concepts from a single platform.
+
+Built using **HTML**, **CSS**, **JavaScript**, and **Flask**, the project focuses on simplicity, speed, accessibility, and an improved learning experience.
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|----------|-------------|
+| 🧮 Scientific Calculator | Perform mathematical calculations quickly |
+| 🔍 Smart Formula Search | Search formulas instantly |
+| 💡 Live Suggestions | Suggestions appear while typing |
+| 📚 Formula Library | Organized mathematical references |
+| ⚡ Smooth Navigation | Jump directly to formulas |
+| 🎯 Formula Highlighting | Highlight searched results |
+| 📱 Responsive Layout | Works on multiple screen sizes |
+| 🎨 Clean UI | Simple and user-friendly interface |
+
+---
+
+## 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/scientific-calculator.git
 cd scientific-calculator
-🏗 Create Virtual Environment
+```
+
+### Create Virtual Environment
+
+```bash
 python -m venv .venv
-Activate Environment
+```
 
-Windows
+### Activate Virtual Environment
 
+#### Windows
+
+```bash
 .venv\Scripts\activate
+```
 
-Linux / macOS
+#### Linux / macOS
 
+```bash
 source .venv/bin/activate
-📦 Install Dependencies
+```
+
+### Install Dependencies
+
+```bash
 pip install flask
+```
 
 or
 
+```bash
 pip install -r requirements.txt
-▶️ Run the Application
+```
+
+### Run Application
+
+```bash
 python app.py
+```
 
-Open your browser and visit:
+Open:
 
+```text
 http://127.0.0.1:5000
-🎯 Features
-Feature	Description
-🧮 Scientific Calculator	Perform mathematical calculations efficiently
-🔍 Smart Search	Search formulas instantly
-💡 Live Suggestions	Formula recommendations while typing
-📚 Formula Library	Organized mathematical references
-🎨 Formula Highlighting	Highlights searched formulas
-⚡ Smooth Navigation	Direct scrolling to formula sections
-📱 Responsive Design	Works across multiple screen sizes
-🖥 User-Friendly Interface	Clean and intuitive experience
-📖 How It Works
-Open the application.
-Navigate to the desired mathematical section.
-Enter keywords in the search bar.
-Receive real-time formula suggestions.
-Click a suggestion or press Search.
-The application automatically navigates to the relevant formula.
-Continue learning and solving problems seamlessly.
-🛠 Technology Stack
-Technology	Purpose
-HTML	Structure
-CSS	Styling
-JavaScript	Interactivity & Search
-Flask	Backend
-DOM Manipulation	Dynamic Content Updates
-Event Listeners	User Interactions
-🌟 Benefits
+```
 
-✅ Quick access to mathematical formulas
+---
 
-✅ Faster learning and revision
+## 🛠 Technology Stack
 
-✅ Improved productivity during problem solving
+| Technology | Usage |
+|------------|--------|
+| HTML | Structure |
+| CSS | Styling |
+| JavaScript | Interactivity |
+| Flask | Backend |
+| Python | Application Logic |
 
-✅ Easy navigation through topics
+---
 
-✅ Interactive and beginner-friendly interface
+## 📚 Included Mathematical Sections
 
-✅ Calculator and formula handbook combined into one application
+- Integration Formulas
+- Differentiation Formulas
+- Trigonometric Formulas
+- Scientific Calculations
+- Search Suggestions
+- Formula Navigation System
 
-🔮 Future Enhancements
-Graph Plotting
-Matrix Operations
-Unit Conversion
-Complex Number Calculations
-Search History
-Dark Mode
-PDF Export
-AI-Powered Formula Search
-Step-by-Step Solutions
-📂 Project Structure
+---
+
+## 🎯 Benefits
+
+✅ Fast formula lookup
+
+✅ Easy revision tool
+
+✅ Interactive learning experience
+
+✅ Reduces dependency on textbooks
+
+✅ Beginner-friendly design
+
+✅ Combines calculator and formula handbook
+
+✅ Lightweight and fast
+
+---
+
+## 🔮 Future Improvements
+
+- Graph Plotting
+- Matrix Calculations
+- Unit Conversion
+- Complex Numbers
+- Search History
+- Dark Mode
+- PDF Export
+- AI-Powered Formula Search
+
+---
+
+## 📂 Project Structure
+
+```text
 scientific-calculator/
 │
 ├── static/
@@ -101,16 +162,32 @@ scientific-calculator/
 ├── templates/
 │   ├── index.html
 │   ├── integration.html
-│   ├── differentiation.html
-│   ├── trigonometry.html
+│   ├── diff.html
+│   ├── trig.html
 │
 ├── app.py
 ├── requirements.txt
 └── README.md
-🤝 Contributing
+```
 
-Contributions, feature requests, bug reports, and improvements are always welcome. Feel free to fork the repository, create a new branch, and submit a pull request.
+---
 
-📌 Conclusion
+## 🤝 Contributing
 
-Scientific Calculator is more than just a calculator. It acts as a complete mathematical companion by combining scientific calculations, intelligent search functionality, live suggestions, formula highlighting, and organized mathematical references into a single platform. Whether you are studying, revising, teaching, or solving complex mathematical problems, this application provides a faster, smarter, and more efficient way to work with mathematics.
+Contributions, improvements, bug fixes, and feature suggestions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push branch
+5. Open Pull Request
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving it a star!
+
+Made with ❤️ using Flask, HTML, CSS and JavaScript.
+
+</div>
