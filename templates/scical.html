@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../static/scical.css">
+</head>
+
+<body>
+
+    <button class="cal">background</button>
+    
+   <h1>Calculator</h1><br>
+    <div id="top">
+ <select id="formulasheet" >
+ <option value="">formulasheet</option>
+ <option value="/integration">Integration</option>
+ <option value="/diff">Differentiation</option>
+ <option value="/trig">Trigonometry</option>
+ <option value="/statistics">Statistics</option>
+ </select>
+ 
+<select onchange="changeSize(this.value)">
+
+<option value="520px">Desktop</option>
+<option value="390px">iPhone 14</option>
+<option value="320px">iPhone SE</option>
+<option value="393px">Samsung S23</option>
+<option value="412px">Pixel 7</option>
+
+</select>
+
+<button onclick="big()">+</button>
+
+<button onclick="small()">-</button>
+
+</div>
+    <div id="a">
+    <form method="POST">
+    <input
+       type="hidden"
+       name="selected_formula"
+       value="{{ selected_formula }}">
+     <h2>calculator</h2>
+     <input id="display"
+             type="text"
+             placeholder=" "
+             name="expression"
+             value="{{expression}}"
+             autofocus>
+     {% if result %}
+     <p>{{result}}</p>
+     {% endif %}
+
+     <br>
+     <button class="cal" type="submit" value="exp(" name="btn">e^</button>
+     <button class="cal" type="submit" value="Deg" name="btn">Deg</button>
+     <button class="cal" type="submit" value="!" name="btn">x!</button>
+     <button class="cal" type="submit" value="(" name="btn">(</button>
+     <button class="cal" type="submit" value=")" name="btn">)</button>
+     <button class="cal" id="delall" type="submit" value="c" name="btn">C</button>
+     <button class="cal" type="submit" value="DEL" name="btn">DEL</button>
+    
+    <br>
+
+     <button class="cal" type="submit" value="ln(" name="btn">ln</button>
+     <button class="cal" type="submit" value="sin(" name="btn">sin</button>
+     <button class="cal" type="submit" value="%" name="btn">%</button>
+     <button class="cal" type="submit" value="7" name="btn">7</button>
+     <button class="cal" type="submit" value="8" name="btn">8</button>
+     <button class="cal" type="submit" value="9" name="btn">9</button>
+     <button class="cal" type="submit" value="/" name="btn">/</button>
+    <br>
+    <button class="cal" type="submit" value="log(" name="btn">log</button>
+     <button class="cal" type="submit" value="cos(" name="btn">cos</button>
+     <button class="cal" type="submit" value="10^" name="btn">10^</button>
+     <button class="cal" type="submit" value="4" name="btn">4</button>
+     <button class="cal" type="submit" value="5" name="btn">5</button>
+     <button class="cal" type="submit" value="6" name="btn">6</button>
+     <button class="cal" type="submit" value="*" name="btn">*</button>
+    <br>
+    <button class="cal" type="submit" value="^" name="btn">^</button>
+     <button class="cal" type="submit" value="tan(" name="btn">tan</button>
+     <button class="cal" type="submit" value="1/x" name="btn">1/x</button>
+     <button class="cal" type="submit" value="1" name="btn">1</button>
+     <button class="cal" type="submit" value="2" name="btn">2</button>
+     <button class="cal" type="submit" value="3" name="btn">3</button>
+     <button class="cal" type="submit" value="-" name="btn">-</button>
+    <br>
+    <button class="cal" type="submit" value="Exp" name="btn">Exp</button>
+     <button class="cal" type="submit" value="π" name="btn">π</button>
+     <button class="cal" type="submit" value="e" name="btn">e</button>
+     <button class="cal" type="submit" value="0" name="btn">0</button>
+     <button class="cal" type="submit" value="." name="btn">.</button>
+     <button class="cal" id="b" type="submit" value="=" name="btn">=</button>
+     <button class="cal" type="submit" value="+" name="btn">+</button>
+     <br>
+     <button class="cal" id="com" type="submit" value="commentout" name="btn">commentout</button><br><br>
+
+     <br>
+
+     <div class="integral-panel">
+
+    <h3>Integral Evaluator</h3>
+
+    <div class="selected-formula">
+        Selected Formula:
+        {{ selected_formula }}
+    </div>
+
+    <div class="limit-row">
+
+        <input
+            type="text"
+            name="lowerlimit"
+            placeholder="Enter Lower Limit">
+
+        <input
+            type="text"
+            name="upperlimit"
+            placeholder="Enter Upper Limit">
+
+    </div>
+
+    <button
+        class="evaluate-btn"
+        type="submit"
+        name="action"
+        value="evaluate_integral">
+
+        Evaluate Integral
+
+    </button>
+
+    <div id="answer-box">
+
+        <h3>Definite Integral Answer</h3>
+
+        {% if integralresult %}
+            <p>{{ integralresult }}</p>
+        {% else %}
+            <p>Answer will appear here</p>
+        {% endif %}
+
+    </div>
+
+</div>
+    </form>
+    </div>
+    <script src="../static/scical.js"></script>
+
+
+    
+</body>
+</html>
+
+
+

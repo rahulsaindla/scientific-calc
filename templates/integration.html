@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration</title>
+    <link rel="stylesheet" href="../static/integration.css">
+</head>
+<body>
+     <h1>integral formulas</h1>
+     
+    <input type="text"
+        id="search"
+        placeholder="search formulas">
+    <button id="searchbtn">search</button>
+    <div id="suggestion"></div>
+
+    <p>
+        <p class="intro">
+
+Integration is a fundamental concept in calculus that is used to find the accumulation of quantities such as area, volume, displacement, work, and probability. It is often considered the reverse process of differentiation because integrating a derivative returns the original function (plus a constant). There are two main types of integration: indefinite integration, which produces a family of functions and includes the constant of integration (C), and definite integration, which calculates a numerical value between specified limits. To evaluate a definite integral, first find the antiderivative of the function, then substitute the upper limit and lower limit into the antiderivative and subtract the two results according to the Fundamental Theorem of Calculus. Integration is widely used in mathematics, physics, engineering, economics, and data science to solve problems involving continuous change and accumulated quantities.
+
+</p>
+
+<h2>INTEGRATION FORMULA SHEET</h2><br>
+<h5>Double click on expression,for evaluation:</h5>
+<h3 id="basic">1. BASIC INTEGRATION RULES</h3><br>
+
+<p class="formula">∫  dx = x + C<p><br>
+
+<p class="formula">∫ x dx = x²/2 + C</p><br>
+
+<p class="formula">∫ x² dx = x³/3 + C</p><br>
+
+<p class="formula">∫ x³ dx = x⁴/4 + C</p><br>
+
+<p class="formula">∫ 1/x dx = ln|x| + C</p><br>
+
+
+<h3 id="expo">3. EXPONENTIAL FUNCTIONS</h3><br>
+
+<p class="formula">∫ eˣ dx = eˣ + C</p><br>
+
+<p class="formula">∫ e^(ax) dx = e^(ax)/a + C</p><br>
+
+<p class="formula">∫ aˣ dx = aˣ/ln(a) + C</p><br>
+
+<p class="formula">∫ a^(kx) dx = a^(kx)/(kln(a)) + C</p><br><br>
+
+<h3 id="log">4. LOGARITHMIC FUNCTIONS</h3><br>
+
+<p class="formula">∫ 1/x dx = ln|x| + C</p><br>
+
+<p class="formula">∫ ln(x) dx = xln(x)-x+C</p><br>
+
+<p class="formula">∫ logₐ(x) dx = (xln(x)-x)/ln(a)+C</p><br>
+
+<p class="formula">∫ 1/(xln(x)) dx = ln|ln(x)|+C</p><br><br>
+
+<h3 id="trig">5. TRIGONOMETRIC FUNCTIONS</h3><br>
+
+<p class="formula">∫ sin(x) dx = -cos(x)+C</p><br>
+
+<p class="formula">∫ cos(x) dx = sin(x)+C</p><br>
+
+<p class="formula">∫ tan(x) dx = ln|sec(x)|+C</p><br>
+
+<p class="formula">∫ cot(x) dx = ln|sin(x)|+C</p><br>
+
+<p class="formula">∫ sec²(x) dx = tan(x)+C</p><br>
+
+<p class="formula">∫ csc²(x) dx = -cot(x)+C</p><br>
+
+<p class="formula">∫ sec(x)tan(x) dx = sec(x)+C</p><br>
+
+<p class="formula">∫ csc(x)cot(x) dx = -csc(x)+C</p><br>
+
+<p class="formula">∫ sec(x) dx = ln|sec(x)+tan(x)|+C</p><br>
+
+<p class="formula">∫ csc(x) dx = ln|csc(x)-cot(x)|+C</p><br><br>
+
+<h3 id="inverse">6. INVERSE TRIGONOMETRIC INTEGRALS</h3><br>
+
+<p class="formula">∫ 1/√(1-x²) dx = sin⁻¹(x)+C</p><br>
+
+<p class="formula">∫ -1/√(1-x²) dx = cos⁻¹(x)+C</p><br>
+
+<p class="formula">∫ 1/(1+x²) dx = tan⁻¹(x)+C</p><br>
+
+<p class="formula">∫ -1/(1+x²) dx = cot⁻¹(x)+C</p><br>
+
+<p class="formula">∫ 1/(|x|√(x²-1)) dx = sec⁻¹(x)+C</p><br>
+
+<p class="formula">∫ -1/(|x|√(x²-1)) dx = csc⁻¹(x)+C</p><br><br>
+
+<h3 id="hyperbola">7. HYPERBOLIC FUNCTIONS</h3><br>
+
+<p class="formula">∫ sinh(x) dx = cosh(x)+C</p><br>
+
+<p class="formula">∫ cosh(x) dx = sinh(x)+C</p><br>
+
+<p class="formula">∫ sech²(x) dx = tanh(x)+C</p><br>
+
+<p class="formula">∫ csch²(x) dx = -coth(x)+C</p><br>
+
+<p class="formula">∫ sech(x)tanh(x) dx = -sech(x)+C</p><br>
+
+<p class="formula">∫ csch(x)coth(x) dx = -csch(x)+C</p><br><br>
+
+<h3 id="subs">8. SUBSTITUTION METHOD</h3><br>
+
+If u = g(x)<br>
+
+Then<br>
+
+∫ f(g(x))g'(x)dx = ∫ f(u)du<br><br>
+
+<h3 id="parts">9. INTEGRATION BY PARTS</h3><br>
+
+∫ u dv = uv - ∫ v du<br><br>
+
+ILATE Rule<br>
+
+I → Inverse Trig<br>
+
+L → Logarithmic<br>
+
+A → Algebraic<br>
+
+T → Trigonometric<br>
+
+E → Exponential<br><br>
+
+<h3 id="partial">10. PARTIAL FRACTIONS</h3><br>
+
+∫ 1/(x-a) dx = ln|x-a|+C<br>
+
+∫ 1/(x-a)² dx = -1/(x-a)+C<br>
+
+∫ 1/(x²+a²) dx = (1/a)tan⁻¹(x/a)+C<br>
+
+∫ 1/(a²-x²) dx = (1/2a)ln|(a+x)/(a-x)|+C<br>
+
+∫ 1/(x²-a²) dx = (1/2a)ln|(x-a)/(x+a)|+C<br><br>
+
+<h3 id="definite">11. DEFINITE INTEGRALS</h3><br>
+
+∫ₐᵇ f(x)dx = F(b)-F(a)<br>
+
+∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx<br>
+
+∫ₐᵇ f(x)dx = ∫ₐᶜ f(x)dx + ∫ᶜᵇ f(x)dx<br><br>
+
+<h3 id="reduction">12. REDUCTION FORMULAE</h3><br>
+
+Iₙ = ∫ sinⁿ(x)dx<br>
+
+Iₙ = -sinⁿ⁻¹(x)cos(x)/n + ((n-1)/n)Iₙ₋₂<br><br>
+
+Iₙ = ∫ cosⁿ(x)dx<br>
+
+Iₙ = sin(x)cosⁿ⁻¹(x)/n + ((n-1)/n)Iₙ₋₂<br><br>
+
+<h3 id="beta">13. BETA FUNCTION</h3><br>
+
+B(m,n)=∫₀¹ xᵐ⁻¹(1-x)ⁿ⁻¹dx<br>
+
+B(m,n)=Γ(m)Γ(n)/Γ(m+n)<br><br>
+
+<h3 id="gamma">14. GAMMA FUNCTION</h3><br>
+
+Γ(n)=∫₀∞ e⁻ˣxⁿ⁻¹dx<br>
+
+Γ(n+1)=nΓ(n)<br>
+
+Γ(n)=(n-1)!<br><br>
+
+<h3 id="dbl">15. DOUBLE INTEGRALS</h3><br>
+
+∫∫ f(x,y)dA<br>
+
+Area = ∬ dA<br><br>
+
+<h3 id="triple">16. TRIPLE INTEGRALS</h3><br>
+
+∭ f(x,y,z)dV<br>
+
+Volume = ∭ dV<br><br>
+
+<h3 id="polar">17. POLAR COORDINATE INTEGRALS</h3><br>
+
+∫∫ f(r,θ) r dr dθ<br><br>
+
+<h3 id="vector">18. VECTOR INTEGRATION</h3><br>
+
+Line Integral<br>
+
+∫ F·dr<br><br>
+
+Surface Integral<br>
+
+∯ F·dS<br><br>
+
+Volume Integral<br>
+
+∭ F dV<br><br>
+
+</p>
+<script>
+    
+
+
+    const formulaMap = {
+
+    "basic":"basic",
+    "basic integration":"basic",
+    "integration rules":"basic",
+
+    "algebra":"algebra",
+    "algebraic":"algebra",
+
+    "expo":"expo",
+    "exponential":"expo",
+    "exponential functions":"expo",
+
+    "log":"log",
+    "logarithm":"log",
+    "logarithmic":"log",
+
+    "trig":"trig",
+    "trigonometry":"trig",
+    "sin":"trig",
+    "cos":"trig",
+    "tan":"trig",
+
+    "inverse":"inverse",
+    "inverse trig":"inverse",
+
+    "hyperbola":"hyperbola",
+    "hyperbolic":"hyperbola",
+
+    "substitution":"subs",
+
+    "parts":"parts",
+    "integration by parts":"parts",
+
+    "partial":"partial",
+    "partial fractions":"partial",
+
+    "definite":"definite",
+
+    "reduction":"reduction",
+
+    "beta":"beta",
+
+    "gamma":"gamma",
+
+    "double":"dbl",
+
+    "triple":"triple",
+
+    "polar":"polar",
+
+    "vector":"vector"
+
+};
+
+const searchBox = document.querySelector("#search");
+const searchbtn = document.querySelector("#searchbtn");
+searchbtn.addEventListener("click",searchFormula);
+searchBox.addEventListener("keydown",(event)=>{
+    
+    if(event.key==="Enter"){
+          searchFormula();
+    }
+});
+function searchFormula(){
+
+    let query = searchBox.value.toLowerCase().trim();
+
+    console.log(query);
+
+    let targetId = formulaMap[query];
+
+    if(targetId){
+        document.getElementById(targetId)
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+    }
+    else{
+        alert("Formula topic not found");
+    }
+};
+
+const suggestionBox = document.querySelector("#suggestion");
+
+searchBox.addEventListener("input", () => {
+
+    let query = searchBox.value.toLowerCase().trim();
+
+    suggestionBox.innerHTML = "";
+
+    if(query === ""){
+        return;
+    }
+
+    let matches = Object.keys(formulaMap).filter(item =>
+        item.includes(query)
+    );
+
+    matches.forEach(item => {
+
+        let div = document.createElement("div");
+
+        div.innerText = item;
+
+        div.classList.add("suggestion-item");
+
+        div.addEventListener("click", () => {
+
+            searchBox.value = item;
+
+            suggestionBox.innerHTML = "";
+
+            let targetId = formulaMap[item];
+
+            document.getElementById(targetId)
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+        suggestionBox.appendChild(div);
+
+    });
+
+});
+const formulas = document.querySelectorAll(".formula");
+formulas.forEach((formula)=>{
+    formula.addEventListener("dblclick",()=>{
+      let text=formula.innerText;
+      let part=text.split("=");
+      let anti = part[1];
+      anti=anti.trim();
+      anti=anti.replace("+ C","");
+      window.location.href = "/?formula=" + encodeURIComponent(anti);
+    })
+});
+
+
+    </script>
+   </body>
+</html>

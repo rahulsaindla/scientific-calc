@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differntiation</title>
+    <link rel="stylesheet" href="../static/diff.css">
+</head>
+<body>
+    <input type="text"
+        id="search"
+        placeholder="search formulas">
+    <button id="searchbtn">search</button>
+    <div id="suggestions"></div>
+    <p>
+
+<h3>1. BASIC DIFFERENTIATION RULES</h3><br>
+
+<span class="formula">d/dx(c) = 0</span><br>
+
+<span class="formula">d/dx(x) = 1</span><br>
+
+<span class="formula">d/dx(x²) = 2x</span><br>
+
+<span class="formula">d/dx(x³) = 3x²</span><br>
+
+<span class="formula">d/dx(xⁿ) = nxⁿ⁻¹</span><br>
+
+<span class="formula">d/dx(√x) = 1/(2√x)</span><br>
+
+<span class="formula">d/dx(1/x) = -1/x²</span><br>
+
+<span class="formula">d/dx(x⁻ⁿ) = -n/xⁿ⁺¹</span><br><br>
+
+<h3>2. ALGEBRAIC RULES</h3><br>
+
+<span class="formula">d/dx [cf(x)] = c·f'(x)</span><br>
+
+<span class="formula">d/dx [f(x)+g(x)] = f'(x)+g'(x)</span><br>
+
+<span class="formula">d/dx [f(x)-g(x)] = f'(x)-g'(x)</span><br><br>
+
+<h3>3. PRODUCT RULE</h3><br>
+
+<span class="formula">d/dx [u·v]</span><br>
+
+<span class="formula">= u(dv/dx) + v(du/dx)</span><br><br>
+
+<h3>4. QUOTIENT RULE</h3><br>
+
+<span class="formula">d/dx [u/v]</span><br>
+
+<span class="formula">= (v·du/dx - u·dv/dx)/v²</span><br><br>
+
+<h3>5. CHAIN RULE</h3><br>
+
+<span class="formula">d/dx[f(g(x))]</span><br>
+
+<span class="formula">= f'(g(x))·g'(x)</span><br><br>
+
+<h3>6. EXPONENTIAL FUNCTIONS</h3><br>
+
+<span class="formula">d/dx(eˣ) = eˣ</span><br>
+
+<span class="formula">d/dx(eᵘ) = eᵘ·du/dx</span><br>
+
+<span class="formula">d/dx(aˣ) = aˣ ln(a)</span><br>
+
+<span class="formula">d/dx(aᵘ) = aᵘ ln(a)·du/dx</span><br><br>
+
+<h3>7. LOGARITHMIC FUNCTIONS</h3><br>
+
+<span class="formula">d/dx(lnx) = 1/x</span><br>
+
+<span class="formula">d/dx(logₐx) = 1/(xln(a))</span><br>
+
+<span class="formula">d/dx(lnu) = (1/u)·du/dx</span><br>
+
+<span class="formula">d/dx(logₐu) = (1/(uln(a)))·du/dx</span><br><br>
+
+<h3>8. TRIGONOMETRIC FUNCTIONS</h3><br>
+
+<span class="formula">d/dx(sinx) = cosx</span><br>
+
+<span class="formula">d/dx(cosx) = -sinx</span><br>
+
+<span class="formula">d/dx(tanx) = sec²x</span><br>
+
+<span class="formula">d/dx(cotx) = -cosec²x</span><br>
+
+<span class="formula">d/dx(secx) = secx tanx</span><br>
+
+<span class="formula">d/dx(cosecx) = -cosecx cotx</span><br><br>
+</p>
+<script>
+    
+
+const searchInput = document.getElementById("search");
+const searchBtn = document.getElementById("searchbtn");
+const suggestions = document.getElementById("suggestions");
+
+const formulas = document.querySelectorAll(".formula");
+const headings = document.querySelectorAll("h3");
+
+const searchableItems = [
+    ...headings,
+    ...formulas
+];
+
+/* =====================
+   LIVE SUGGESTIONS
+===================== */
+
+searchInput.addEventListener("input", () => {
+
+    let value = searchInput.value.trim().toLowerCase();
+
+    suggestions.innerHTML = "";
+
+    if (value === "") return;
+
+    searchableItems.forEach((itemElement) => {
+
+        let text = itemElement.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+
+            let item = document.createElement("div");
+
+            item.classList.add("suggestion-item");
+
+            item.innerText = itemElement.innerText;
+
+            item.addEventListener("click", () => {
+
+                document
+                    .querySelectorAll(".highlight")
+                    .forEach(el => el.classList.remove("highlight"));
+
+                itemElement.classList.add("highlight");
+
+                itemElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+                searchInput.value = itemElement.innerText;
+
+                suggestions.innerHTML = "";
+            });
+
+            suggestions.appendChild(item);
+        }
+
+    });
+
+});
+
+
+/* =====================
+   SEARCH BUTTON
+===================== */
+
+searchBtn.addEventListener("click", searchFormula);
+
+searchInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        searchFormula();
+    }
+
+});
+
+
+/* =====================
+   SEARCH FUNCTION
+===================== */
+
+function searchFormula() {
+
+    let value = searchInput.value.trim().toLowerCase();
+
+    document
+        .querySelectorAll(".highlight")
+        .forEach(el => el.classList.remove("highlight"));
+
+    if (value === "") return;
+
+    let found = false;
+
+    searchableItems.forEach((itemElement) => {
+
+        let text = itemElement.innerText.toLowerCase();
+
+        if (text.includes(value) && !found) {
+
+            itemElement.classList.add("highlight");
+
+            itemElement.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            found = true;
+        }
+
+    });
+
+    if (!found) {
+        alert("No matching formula found");
+    }
+
+    suggestions.innerHTML = "";
+}
+
+
+/* =====================
+   DOUBLE CLICK SUPPORT
+===================== */
+
+formulas.forEach((formula) => {
+
+    formula.addEventListener("dblclick", () => {
+
+        let text = formula.innerText;
+
+        console.log(text);
+
+    });
+
+});
+
+
+</script>
+
+
+    </body>
+    </html>

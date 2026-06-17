@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:#f5f7f6;
+    font-family:'Inter',sans-serif;
+    padding:20px;
+}
+
+/* =====================
+   TOP CONTROLS
+===================== */
+
+#top{
+    width:min(650px,95vw);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    gap:10px;
+}
+
+#top select{
+    flex:1;
+    max-width:220px;
+
+    height:45px;
+
+    border:none;
+    border-radius:14px;
+
+    background:white;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.06);
+}
+
+#top button{
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:12px;
+
+    background:white;
+
+    color:#16a34a;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.06);
+}
+
+/* =====================
+   CALCULATOR
+===================== */
+
+#a{
+
+    width:min(1000px,95vw);
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:30px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+}
+/* =====================
+   TITLE
+===================== */
+
+h2{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    color:#16a34a;
+
+    letter-spacing:3px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+/* =====================
+   DISPLAY
+===================== */
+
+#display{
+
+    grid-column:1/-1;
+
+    width:100%;
+
+    height:130px;
+
+    border:none;
+
+    outline:none;
+
+    background:#f9fafb;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:right;
+
+    font-size:clamp(36px,6vw,65px);
+
+    color:#111827;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    inset 0 2px 8px rgba(0,0,0,.05);
+}
+form h2,
+#display{
+
+    grid-column:1/-1;
+}
+/* =====================
+   GRID
+===================== */
+
+form{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,minmax(0,1fr));
+
+    gap:8px;
+}
+
+form h2,
+form #dispaly{
+    grid-column:1/-1;
+}
+
+form br{
+    display:none;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+
+.cal{
+
+    width:100%;
+
+    min-width:0;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:transparent;
+
+    color:#111827;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.cal:hover{
+
+    background:#f3f4f6;
+}
+
+.cal:active{
+
+    transform:scale(.95);
+}
+
+/* Numbers */
+
+.cal[value="0"],
+.cal[value="1"],
+.cal[value="2"],
+.cal[value="3"],
+.cal[value="4"],
+.cal[value="5"],
+.cal[value="6"],
+.cal[value="7"],
+.cal[value="8"],
+.cal[value="9"],
+.cal[value="."]{
+
+    font-size:22px;
+}
+
+/* Operators */
+
+.cal[value="+"],
+.cal[value="-"],
+.cal[value="*"],
+.cal[value="/"],
+.cal[value="%"],
+.cal[value="^"]{
+
+    color:#22c55e;
+
+    font-size:22px;
+
+    font-weight:700;
+}
+
+/* Scientific */
+
+.cal[value="sin("],
+.cal[value="cos("],
+.cal[value="tan("],
+.cal[value="ln"],
+.cal[value="log"],
+.cal[value="π"],
+.cal[value="e"],
+.cal[value="e^"],
+.cal[value="Exp"],
+.cal[value="1/x"],
+.cal[value="x!"],
+.cal[value="Deg"]{
+
+    color:#15803d;
+
+    background:#f0fdf4;
+}
+
+/* Brackets */
+
+.cal[value="("],
+.cal[value=")"]{
+
+    color:#16a34a;
+}
+
+/* Clear */
+
+.cal[value="C"]{
+
+    color:#16a34a;
+}
+
+/* Delete */
+
+.cal[value="DEL"]{
+
+    color:#ef4444;
+}
+
+/* Equals */
+
+#b{
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 8px 20px rgba(34,197,94,.25);
+}
+
+#b:hover{
+
+    background:#16a34a;
+}
+
+/* Error Message */
+
+.error{
+
+    margin-top:12px;
+
+    padding:10px;
+
+    text-align:center;
+
+    color:#dc2626;
+
+    background:#fef2f2;
+
+    border-radius:10px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media(max-width:700px){
+
+    form{
+
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .cal{
+
+        height:50px;
+
+        font-size:13px;
+    }
+}
+
+@media(max-width:450px){
+
+    #a{
+        padding:15px;
+    }
+
+    #dispaly{
+        height:90px;
+        font-size:30px;
+    }
+
+    .cal{
+        height:45px;
+        font-size:12px;
+    }
+}
+/* =====================
+   WIDER CALCULATOR
+===================== */
+
+#a{
+    width:min(900px,95vw);
+}
+
+#top{
+    width:min(900px,95vw);
+}
+
+/* =====================
+   INTEGRAL PANEL
+===================== */
+
+.integral-panel{
+
+    grid-column:1/-1;
+
+    margin-top:25px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+}
+
+.integral-panel h3{
+
+    margin-bottom:15px;
+
+    color:#15803d;
+
+    font-size:20px;
+}
+
+.selected-formula{
+
+    margin-bottom:15px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#15803d;
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,.05);
+}
+
+.limit-row{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-bottom:15px;
+}
+
+.limit-row input{
+
+    flex:1;
+
+    height:50px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    box-shadow:
+    0 5px 12px rgba(0,0,0,.05);
+}
+
+.evaluate-btn{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    margin-bottom:15px;
+}
+
+.evaluate-btn:hover{
+
+    background:#16a34a;
+}
+
+/* =====================
+   ANSWER BOX
+===================== */
+
+#answer-box{
+
+    min-height:90px;
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:15px;
+
+    border:2px dashed #22c55e;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+#answer-box h3{
+
+    color:#15803d;
+
+    margin-bottom:10px;
+}
+
+#answer-box p{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111827;
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media(max-width:600px){
+
+    .limit-row{
+
+        flex-direction:column;
+    }
+
+    .limit-row input{
+
+        width:100%;
+    }
+}

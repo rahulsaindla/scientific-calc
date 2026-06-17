@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="../static/statistics.css">
+</head>
+<body>
+    <input type="text"
+        id="search"
+        placeholder="search formulas">
+    <button id="searchbtn">search</button>
+    <div id="suggestions"></div>
+    <h1>Statistics formulas</h1>
+    <p>
+
+<h2>STATISTICS COMPLETE FORMULA SHEET</h2><br>
+
+<h3>1. BASIC TERMINOLOGY</h3><br>
+
+Population = Entire collection of observations<br>
+
+Sample = Subset of population<br>
+
+Parameter = Numerical characteristic of population<br>
+
+Statistic = Numerical characteristic of sample<br>
+
+Variable = Measurable characteristic<br>
+
+Frequency = Number of occurrences<br><br>
+
+<h3>2. MEASURES OF CENTRAL TENDENCY</h3><br>
+
+Arithmetic Mean (Ungrouped)<br>
+
+Mean = Σx / n<br><br>
+
+Arithmetic Mean (Frequency Distribution)<br>
+
+Mean = Σfx / Σf<br><br>
+
+Weighted Mean<br>
+
+Weighted Mean = Σwx / Σw<br><br>
+
+Combined Mean<br>
+
+x̄ = (n₁x̄₁ + n₂x̄₂)/(n₁+n₂)<br><br>
+
+<h3>3. MEDIAN</h3><br>
+
+Median Position = (n+1)/2<br><br>
+
+Grouped Data Median<br>
+
+Median = l + [(N/2 − cf)/f]h<br><br>
+
+Where:<br>
+
+l = lower boundary<br>
+
+N = total frequency<br>
+
+cf = cumulative frequency before median class<br>
+
+f = frequency of median class<br>
+
+h = class width<br><br>
+
+<h3>4. MODE</h3><br>
+
+Mode = l + [(f₁−f₀)/(2f₁−f₀−f₂)]h<br><br>
+
+Where:<br>
+
+f₁ = modal class frequency<br>
+
+f₀ = preceding frequency<br>
+
+f₂ = succeeding frequency<br><br>
+
+<h3>5. EMPIRICAL RELATION</h3><br>
+
+Mode = 3Median − 2Mean<br><br>
+
+Mean − Mode = 3(Mean − Median)<br><br>
+
+<h3>6. GEOMETRIC MEAN</h3><br>
+
+GM = (x₁x₂x₃...xₙ)^(1/n)<br><br>
+
+GM = Antilog[(Σlogx)/n]<br><br>
+
+<h3>7. HARMONIC MEAN</h3><br>
+
+HM = n / Σ(1/x)<br><br>
+
+Relationship:<br>
+
+AM ≥ GM ≥ HM<br><br>
+
+<h3>8. RANGE</h3><br>
+
+Range = Largest Value − Smallest Value<br><br>
+
+Coefficient of Range<br>
+
+(L−S)/(L+S)<br><br>
+
+<h3>9. QUARTILES</h3><br>
+
+Q₁ Position = (n+1)/4<br>
+
+Q₂ Position = (n+1)/2<br>
+
+Q₃ Position = 3(n+1)/4<br><br>
+
+<h3>10. INTERQUARTILE RANGE</h3><br>
+
+IQR = Q₃ − Q₁<br><br>
+
+Quartile Deviation<br>
+
+(Q₃−Q₁)/2<br><br>
+
+Coefficient of Quartile Deviation<br>
+
+(Q₃−Q₁)/(Q₃+Q₁)<br><br>
+
+<h3>11. MEAN DEVIATION</h3><br>
+
+MD about Mean = Σ|x−x̄|/n<br><br>
+
+MD about Median = Σ|x−Median|/n<br><br>
+
+<h3>12. VARIANCE</h3><br>
+
+Population Variance<br>
+
+σ² = Σ(x−μ)²/N<br><br>
+
+Sample Variance<br>
+
+s² = Σ(x−x̄)²/(n−1)<br><br>
+
+<h3>13. STANDARD DEVIATION</h3><br>
+
+σ = √σ²<br><br>
+
+s = √s²<br><br>
+
+Shortcut Formula<br>
+
+σ = √[(Σx²/N)−μ²]<br><br>
+
+<h3>14. COEFFICIENT OF VARIATION</h3><br>
+
+CV = (σ/Mean) ×100<br><br>
+
+<h3>15. Z-SCORE</h3><br>
+
+z = (x−μ)/σ<br><br>
+
+<h3>16. MOMENTS</h3><br>
+
+First Moment = Mean<br><br>
+
+Second Central Moment = Variance<br><br>
+
+μ₂ = Σ(x−x̄)²/n<br><br>
+
+μ₃ = Σ(x−x̄)³/n<br><br>
+
+μ₄ = Σ(x−x̄)⁴/n<br><br>
+
+<h3>17. SKEWNESS</h3><br>
+
+Karl Pearson's Coefficient<br>
+
+Sk = (Mean−Mode)/σ<br><br>
+
+Sk = 3(Mean−Median)/σ<br><br>
+
+Bowley's Coefficient<br>
+
+(Q₃+Q₁−2Median)/(Q₃−Q₁)<br><br>
+
+<h3>18. KURTOSIS</h3><br>
+
+β₂ = μ₄/(μ₂²)<br><br>
+
+Excess Kurtosis<br>
+
+γ₂ = β₂−3<br><br>
+
+<h3>19. CORRELATION</h3><br>
+
+Karl Pearson Coefficient<br>
+
+r = Σ[(x−x̄)(y−ȳ)] / √[Σ(x−x̄)²Σ(y−ȳ)²]<br><br>
+
+Range of r<br>
+
+−1 ≤ r ≤ 1<br><br>
+
+<h3>20. RANK CORRELATION</h3><br>
+
+Spearman's Formula<br>
+
+ρ = 1 − [6Σd²/(n(n²−1))]<br><br>
+
+<h3>21. REGRESSION</h3><br>
+
+Regression of Y on X<br>
+
+Y−Ȳ = bᵧₓ(X−X̄)<br><br>
+
+Regression of X on Y<br>
+
+X−X̄ = bₓᵧ(Y−Ȳ)<br><br>
+
+Regression Coefficients<br>
+
+bᵧₓ = r(σy/σx)<br>
+
+bₓᵧ = r(σx/σy)<br><br>
+
+<h3>22. PROBABILITY BASICS</h3><br>
+
+P(A)=n(A)/n(S)<br><br>
+
+0 ≤ P(A) ≤ 1<br><br>
+
+P(A') = 1−P(A)<br><br>
+
+<h3>23. ADDITION THEOREM</h3><br>
+
+P(A∪B)=P(A)+P(B)−P(A∩B)<br><br>
+
+<h3>24. MULTIPLICATION THEOREM</h3><br>
+
+P(A∩B)=P(A)P(B|A)<br><br>
+
+Independent Events<br>
+
+P(A∩B)=P(A)P(B)<br><br>
+
+<h3>25. CONDITIONAL PROBABILITY</h3><br>
+
+P(A|B)=P(A∩B)/P(B)<br><br>
+
+<h3>26. BAYES THEOREM</h3><br>
+
+P(Aᵢ|B)=P(Aᵢ)P(B|Aᵢ)/Σ[P(Aⱼ)P(B|Aⱼ)]<br><br>
+
+<h3>27. PERMUTATIONS</h3><br>
+
+ⁿPᵣ = n!/(n−r)!<br><br>
+
+<h3>28. COMBINATIONS</h3><br>
+
+ⁿCᵣ = n!/[r!(n−r)!]<br><br>
+
+<h3>29. BINOMIAL DISTRIBUTION</h3><br>
+
+P(X=x)=ⁿCₓpˣqⁿ⁻ˣ<br><br>
+
+Mean=np<br><br>
+
+Variance=npq<br><br>
+
+SD=√npq<br><br>
+
+<h3>30. POISSON DISTRIBUTION</h3><br>
+
+P(X=x)=e⁻ᵐmˣ/x!<br><br>
+
+Mean=m<br><br>
+
+Variance=m<br><br>
+
+<h3>31. NORMAL DISTRIBUTION</h3><br>
+
+f(x)=1/(σ√2π)e^[-(x−μ)²/2σ²]<br><br>
+
+Mean = Median = Mode<br><br>
+
+Total Area = 1<br><br>
+
+<h3>32. SAMPLING THEORY</h3><br>
+
+Standard Error of Mean<br>
+
+SE = σ/√n<br><br>
+
+Standard Error of Proportion<br>
+
+SE = √[pq/n]<br><br>
+
+<h3>33. CONFIDENCE INTERVAL</h3><br>
+
+Mean ± Z(σ/√n)<br><br>
+
+<h3>34. TEST OF HYPOTHESIS</h3><br>
+
+Z = (x̄−μ)/(σ/√n)<br><br>
+
+t = (x̄−μ)/(s/√n)<br><br>
+
+χ² = Σ(O−E)²/E<br><br>
+
+F = s₁²/s₂²<br><br>
+
+<h3>35. IMPORTANT RELATIONSHIPS</h3><br>
+
+Mean > Median > Mode (Positive Skew)<br><br>
+
+Mean < Median < Mode (Negative Skew)<br><br>
+
+Variance = SD²<br><br>
+
+CV = (SD/Mean)×100<br><br>
+
+r² = Coefficient of Determination<br><br>
+
+</p>
+<script>
+document.querySelectorAll("p").forEach(p => {
+
+    let html = p.innerHTML;
+
+    html = html.replace(
+        /([^<>]+)=([^<>]+)<br>/g,
+        '<span class="formula">$1=$2</span><br>'
+    );
+
+    p.innerHTML = html;
+});
+
+
+const searchInput = document.getElementById("search");
+const searchBtn = document.getElementById("searchbtn");
+const suggestions = document.getElementById("suggestions");
+
+const formulas = document.querySelectorAll(".formula");
+const headings = document.querySelectorAll("h3");
+
+const searchableItems = [
+    ...headings,
+    ...formulas
+];
+
+/* =====================
+   LIVE SUGGESTIONS
+===================== */
+
+searchInput.addEventListener("input", () => {
+
+    let value = searchInput.value.trim().toLowerCase();
+
+    suggestions.innerHTML = "";
+
+    if (value === "") return;
+
+    searchableItems.forEach((itemElement) => {
+
+        let text = itemElement.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+
+            let item = document.createElement("div");
+
+            item.classList.add("suggestion-item");
+
+            item.innerText = itemElement.innerText;
+
+            item.addEventListener("click", () => {
+
+                document
+                    .querySelectorAll(".highlight")
+                    .forEach(el => el.classList.remove("highlight"));
+
+                itemElement.classList.add("highlight");
+
+                itemElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+                searchInput.value = itemElement.innerText;
+
+                suggestions.innerHTML = "";
+            });
+
+            suggestions.appendChild(item);
+        }
+
+    });
+
+});
+
+
+/* =====================
+   SEARCH BUTTON
+===================== */
+
+searchBtn.addEventListener("click", searchFormula);
+
+searchInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        searchFormula();
+    }
+
+});
+
+
+/* =====================
+   SEARCH FUNCTION
+===================== */
+
+function searchFormula() {
+
+    let value = searchInput.value.trim().toLowerCase();
+
+    document
+        .querySelectorAll(".highlight")
+        .forEach(el => el.classList.remove("highlight"));
+
+    if (value === "") return;
+
+    let found = false;
+
+    searchableItems.forEach((itemElement) => {
+
+        let text = itemElement.innerText.toLowerCase();
+
+        if (text.includes(value) && !found) {
+
+            itemElement.classList.add("highlight");
+
+            itemElement.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            found = true;
+        }
+
+    });
+
+    if (!found) {
+        alert("No matching formula found");
+    }
+
+    suggestions.innerHTML = "";
+}
+
+
+/* =====================
+   DOUBLE CLICK SUPPORT
+===================== */
+
+formulas.forEach((formula) => {
+
+    formula.addEventListener("dblclick", () => {
+
+        let text = formula.innerText;
+
+        console.log(text);
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
